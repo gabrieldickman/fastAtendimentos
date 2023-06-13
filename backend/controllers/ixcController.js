@@ -1,7 +1,7 @@
 require("dotenv").config(); // require for .env archive
 
 const token = process.env.TOKEN_BD; // variable of token
-
+// test
 // get clients fanta *Para testes*
 const getClients = async (req, res) => {
     const fetchData = await fetch(
@@ -30,5 +30,5 @@ const getClients = async (req, res) => {
 };
 
 export default {
-    getClients
+    getClients,
 };
