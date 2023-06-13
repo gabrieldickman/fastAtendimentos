@@ -1,3 +1,5 @@
+
+
 function app() {
 
     const btnOpa = document.querySelector('#opcao-opa');
@@ -51,13 +53,13 @@ function app() {
                 e.preventDefault();
 
                 const contratoInfo = form.querySelector('#contrato-cliente');
-                const contanteInfo = form.querySelector('#contatante');
+                const contatanteInfo = form.querySelector('#contatante');
                 const telefoneInfo = form.querySelector('#telefone');
 
                 infosColetadas.push({
-                    contratoCliente: contratoInfo.value,
-                    contato: contanteInfo.value,
-                    telefone: telefoneInfo.value
+                    contratoInfo: contratoInfo.value,
+                    contatanteInfo: contatanteInfo.value,
+                    telefoneInfo: telefoneInfo.value
                 })
 
                 const btnGerarAtendimento = document.querySelector('#gerar-atendimento');
@@ -66,15 +68,22 @@ function app() {
             
                 function criaAtendimento(e){
                     e.preventDefault();
-            
-                    const inserirInfos = document.querySelector('#atendimento-gerado');
-                    
-                    const infosInformadas = document.createElement('div')
 
-                    infosInformadas = infosColetadas;
+                    const atendimentoCompleto = document.querySelector('#atendimentoCompleto')
 
-                    inserirInfos.appendChild(infosInformadas);
-            
+                    if(!document.getElementById('atendimento-gerado')){
+
+                        const atendimentoGerado = document.createElement('div');
+
+                        atendimentoGerado.id = 'atendimento-gerado';
+                        
+                        atendimentoCompleto.appendChild(atendimentoGerado) ;
+
+                        const assinante = document.createElement('span');
+
+                        atendimentoGerado.appendChild(assinante);
+
+                    }
             
                 }
 
