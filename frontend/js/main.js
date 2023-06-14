@@ -79,19 +79,35 @@ function app() {
                         
                         atendimentoCompleto.appendChild(atendimentoGerado) ;
 
-                        const assinante = document.createElement('span');
+                        const divAtendimentoGerado = document.querySelector('#atendimento-gerado')
 
-                        atendimentoGerado.appendChild(assinante);
+                        const assinante = document.createElement('div');
+
+                        assinante.id = 'contrato-info'
+                        assinante.innerHTML += `Assinante: ${contratoInfo.value}`
+                        
+                        divAtendimentoGerado.appendChild(assinante);
+
+                        const contatante = document.createElement('div');
+
+                        contatante.id = 'contatante-info'
+                        contatante.innerHTML += `Contato: ${contatanteInfo.value}`
+                        
+                        divAtendimentoGerado.appendChild(contatante);
+
+                        const telefone = document.createElement('div');
+
+                        telefone.id = 'telefone-info'
+                        telefone.innerHTML += `Telefone: ${telefoneInfo.value}`
+                        
+                        divAtendimentoGerado.appendChild(telefone);
+
 
                     }
             
                 }
 
             }
-
-
-    
-
 
 }
 

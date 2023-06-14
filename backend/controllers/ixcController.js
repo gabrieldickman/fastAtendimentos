@@ -1,8 +1,7 @@
-require("dotenv").config(); // require for .env archive
+require("dotenv").config();
 
-const token = process.env.TOKEN_BD; // variable of token
+const token = process.env.TOKEN_BD;
 
-// get clients fanta *Para testes*
 const getClients = async (req, res) => {
     const fetchData = await fetch(
         "https://ixc.brasildigital.net.br/webservice/v1/cliente",
